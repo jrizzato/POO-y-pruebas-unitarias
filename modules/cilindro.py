@@ -129,3 +129,12 @@ class Cilindro:
         """
         area = 2 * math.pi * self.__radio * (self.__radio + self.__altura)
         return area
+    
+
+if __name__ == "__main__":
+    # Código de prueba para el módulo Cilindro
+    cilindro = Cilindro(radio=3, altura=5)
+    print(f"Radio: {cilindro.radio}")
+    print(f"Altura: {cilindro.altura}")
+    print(f"Volumen: {cilindro.calc_vol():.2f}")
+    print(f"Área superficial: {cilindro.area():.2f}")
