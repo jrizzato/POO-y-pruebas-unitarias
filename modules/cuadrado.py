@@ -1,29 +1,4 @@
-class Cuadrado:
-    def __init__(self, lado):
-        pass
 
-    @property
-    def lado(self):
-        pass
-    
-    @lado.setter
-    def lado(self, nuevo_lado):
-        pass
-
-    def area(self):
-        pass
-    
-    def perimetro(self):
-        """Calcula el perímetro del cuadrado.
-        Precondiciones:
-            - El atributo __lado debe ser un número positivo.
-            - El atributo __lado debe ser un valor numérico (int o float).
-        Postcondiciones:
-            - Se devuelve el perímetro del cuadrado calculado como 4 veces el lado.
-        Returns:
-            float: El perímetro del cuadrado.
-        """
-        return 4 * self.__lado
     
 if __name__ == "__main__":
     cuadrado1 = Cuadrado(5) # crea un cuadrado de lado 5
