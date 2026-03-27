@@ -42,19 +42,7 @@ class Cuadrado:
         self.__lado = nuevo_lado
 
     def area(self):
-        """
-        Calcula el área del cuadrado.
-
-        Precondiciones:
-            - El atributo __lado debe ser un número positivo.
-            - El atributo __lado debe ser un valor numérico (int o float).
-
-        Postcondiciones:
-            - Se devuelve el área del cuadrado calculada como lado al cuadrado.
-        Returns:
-            float: El área del cuadrado.
-        """
-        return self.__lado ** 2
+        pass
     
     def perimetro(self):
         """Calcula el perímetro del cuadrado.
