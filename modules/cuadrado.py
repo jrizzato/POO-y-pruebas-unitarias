@@ -2,44 +2,13 @@ class Cuadrado:
     def __init__(self, lado):
         pass
 
-
     @property
     def lado(self):
-        """
-        Getter para el atributo lado.
-
-        Precondiciones:
-            - El atributo __lado debe ser un número positivo.
-            - El atributo __lado debe ser un valor numérico (int o float).
-
-        Postcondiciones:
-            - Se devuelve el valor del lado del cuadrado.
-        Returns:
-            float: El valor del lado del cuadrado.
-        """
-        return self.__lado
+        pass
     
     @lado.setter
     def lado(self, nuevo_lado):
-        """
-        Setter para el atributo lado.
-
-        Args:
-            nuevo_lado (float): El nuevo valor del lado del cuadrado.
-
-        Precondiciones:
-            - nuevo_lado debe ser un número positivo.
-            - nuevo_lado debe ser un valor numérico (int o float).
-
-        Postcondiciones:
-            - El atributo __lado se actualiza con el nuevo valor proporcionado.
-            - Si el nuevo valor no cumple con las precondiciones, se lanza una excepción ValueError.
-        Returns:
-            None
-        """
-        if nuevo_lado <= 0:
-            raise ValueError("ERROR: El lado debe ser positivo")
-        self.__lado = nuevo_lado
+        pass
 
     def area(self):
         pass

@@ -31,7 +31,7 @@ class TestPiramide(unittest.TestCase):
         L = piramide.base_longitud
         h = piramide.altura
         # Volumen = (L² * h) / 3
-        esperado = (L ** 2 * h) / 3
+        esperado = ((L ** 2) * h) / 3
         self.assertAlmostEqual(piramide.volumen(), esperado, places=3)
     
     def test_area_superficial(self):
