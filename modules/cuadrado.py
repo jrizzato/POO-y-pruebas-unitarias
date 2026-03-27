@@ -1,40 +1,74 @@
-# módulo para organizar funciones o clases utilizadas en nuestro proyecto
-# Crear tantos módulos como sea necesario para organizar el código
-
 class Cuadrado:
-    # Define una clase que representa un cuadrado con métodos para calcular su área y perímetro.
-
     def __init__(self, lado):
-        # Constructor de la clase. Inicializa un cuadrado con el valor del lado proporcionado.
-        # Si el lado es menor o igual a 0, lanza una excepción ValueError.
-        if lado <= 0:
-            raise ValueError("El lado debe ser positivo")
-        self.__lado = lado  # Asigna el valor del lado al atributo de la instancia.
+        pass
+
 
     @property
     def lado(self):
-        # Método getter para el atributo 'lado'.
-        return self.__lado
+        """
+        Getter para el atributo lado.
 
+        Precondiciones:
+            - El atributo __lado debe ser un número positivo.
+            - El atributo __lado debe ser un valor numérico (int o float).
+
+        Postcondiciones:
+            - Se devuelve el valor del lado del cuadrado.
+        Returns:
+            float: El valor del lado del cuadrado.
+        """
+        return self.__lado
+    
     @lado.setter
     def lado(self, nuevo_lado):
-        # Método setter para el atributo 'lado'.
-        # Si el nuevo lado es menor o igual a 0, lanza una excepción ValueError.
+        """
+        Setter para el atributo lado.
+
+        Args:
+            nuevo_lado (float): El nuevo valor del lado del cuadrado.
+
+        Precondiciones:
+            - nuevo_lado debe ser un número positivo.
+            - nuevo_lado debe ser un valor numérico (int o float).
+
+        Postcondiciones:
+            - El atributo __lado se actualiza con el nuevo valor proporcionado.
+            - Si el nuevo valor no cumple con las precondiciones, se lanza una excepción ValueError.
+        Returns:
+            None
+        """
         if nuevo_lado <= 0:
-            raise ValueError("El lado debe ser positivo")
-        self.__lado = nuevo_lado  # Actualiza el atributo 'lado' con el nuevo valor.
+            raise ValueError("ERROR: El lado debe ser positivo")
+        self.__lado = nuevo_lado
 
     def area(self):
-        # Calcula y devuelve el área del cuadrado (lado^2).
-        return self.__lado ** 2
+        """
+        Calcula el área del cuadrado.
 
+        Precondiciones:
+            - El atributo __lado debe ser un número positivo.
+            - El atributo __lado debe ser un valor numérico (int o float).
+
+        Postcondiciones:
+            - Se devuelve el área del cuadrado calculada como lado al cuadrado.
+        Returns:
+            float: El área del cuadrado.
+        """
+        return self.__lado ** 2
+    
     def perimetro(self):
-        # Calcula y devuelve el perímetro del cuadrado (4 * lado).
+        """Calcula el perímetro del cuadrado.
+        Precondiciones:
+            - El atributo __lado debe ser un número positivo.
+            - El atributo __lado debe ser un valor numérico (int o float).
+        Postcondiciones:
+            - Se devuelve el perímetro del cuadrado calculado como 4 veces el lado.
+        Returns:
+            float: El perímetro del cuadrado.
+        """
         return 4 * self.__lado
     
-
 if __name__ == "__main__":
-
     cuadrado1 = Cuadrado(5) # crea un cuadrado de lado 5
     area = cuadrado1.area()  # lado al cuadrado
     print(area)
@@ -47,5 +81,8 @@ if __name__ == "__main__":
     print(area)
     perimetro = cuadrado1.perimetro() # lado * 4
     print(perimetro)
-    # cuadrado1.lado = -5 # lanza una excepción
-    # cuadrado2 = Cuadrado(-5) # lanza una excepción
+
+    try:
+        cuadrado1.lado = -5 # intenta asignar un valor negativo al lado, lo que debería lanzar una excepción ValueError
+    except ValueError as e:
+        print(e)
