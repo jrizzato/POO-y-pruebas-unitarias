@@ -96,7 +96,7 @@ class Cilindro:
             raise ValueError("La altura debe ser positiva")
         self.__altura = nueva_altura
     
-    def volumen(self):
+    def calc_vol(self):
         """
         Calcula el volumen del cilindro.
 
@@ -113,7 +113,7 @@ class Cilindro:
 
         return math.pi * (self.__radio ** 2) * self.__altura
     
-    def area_superficial(self):
+    def area(self):
         """
         Calcula el área superficial del cilindro.
 
